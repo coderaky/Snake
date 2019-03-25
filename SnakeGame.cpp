@@ -1,3 +1,5 @@
+//This source code was written by abhishek and adarsh on 20 March 2019 for software lab project. 
+// All right reserved under MIT liecence . https://github.com/coder-aky/Games/blob/master/SnakeGame.cpp.
 #include<stdio.h>
 #include<conio.h>
 #include<ctype.h>
