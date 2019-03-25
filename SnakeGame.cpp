@@ -19,9 +19,9 @@ void textcolor(int fc,int bc=-1){
 	else
 		SetConsoleTextAttribute(h,fc);
 }
-void textcolor(char *fc,char *bc=""){
+void textcolor(char const *fc,char const *bc=""){
 	int x,y=16;
-	char *colors[]={"Black","Blue","Green","Aqua","Red","Purple","Yellow","White","Gray",
+	char const *colors[]={"Black","Blue","Green","Aqua","Red","Purple","Yellow","White","Gray",
 	"LightBlue","LightGreen","LightAqua","LightRed","LightPurple","LightYellow","BrightWhite"};
 	for(x=0;x<16;x++)
 		if(strcmpi(colors[x],fc)==0)
@@ -32,9 +32,9 @@ void textcolor(char *fc,char *bc=""){
 				break;
 	textcolor(x,y);
 }
-void textcolor(char *fc,int bc){
+void textcolor(char const *fc,int bc){
 	int x;
-	char *colors[]={"Black","Blue","Green","Aqua","Red","Purple","Yellow","White","Gray",
+	char const *colors[]={"Black","Blue","Green","Aqua","Red","Purple","Yellow","White","Gray",
 	"LightBlue","LightGreen","LightAqua","LightRed","LightPurple","LightYellow","BrightWhite"};
 	for(x=0;x<16;x++)
 		if(strcmpi(colors[x],fc)==0)
@@ -43,7 +43,7 @@ void textcolor(char *fc,int bc){
 }
 void textcolor(int fc,char *bc){
 	int y;
-	char *colors[]={"Black","Blue","Green","Aqua","Red","Purple","Yellow","White","Gray",
+	char const *colors[]={"Black","Blue","Green","Aqua","Red","Purple","Yellow","White","Gray",
 	"LightBlue","LightGreen","LightAqua","LightRed","LightPurple","LightYellow","BrightWhite"};
 	if(strlen(bc)>0)
 		for(y=0;y<16;y++)
@@ -114,14 +114,14 @@ void getup(){
 	printf("Press Space to Pause and Play");
 	gotoxy(10,23);
 	textcolor("white","blue");
-	printf(" www.abhishekkumaryadav.me");
+	printf(" ABHISHEK AND ADARSH");
 	textcolor(7);
 }
 void score(int sc){
 	gotoxy(69,21);
 	printf("%6d",sc*10);
 }
-void status(char *s,int c=7){
+void status(char const *s,int c=7){
 	gotoxy(69,22);
 	textcolor(c);
 	int x;
@@ -172,7 +172,7 @@ int main(){
 			}
 			gotoxy(xb,yb);
 			textcolor("lightgreen");
-			printf("@");
+			printf("O");
 			textcolor(7);
 			restart=0;
 		}
@@ -192,7 +192,7 @@ int main(){
 				}
 				gotoxy(xb,yb);
 				textcolor("lightgreen");
-				printf("@");
+				printf("O");
 				textcolor(7);
 				size++;
 				scr++;
